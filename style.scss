@@ -1,0 +1,212 @@
+
+//variables
+$c_text: #1A1A1A;
+$c_green: #00B172;
+$c_white: #FFF;
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* BARRA NAVEGACIÓN */
+nav{
+    background-color: $c_white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+
+    
+}
+
+#logo_nav{
+    margin: 0px;
+    height: 40px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    margin: 0px;
+    gap: 20px;
+}
+
+/* IMAGEN LANDING */
+#image_landing{
+    height: 100vh;
+    background-image: url("images/landing.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: calc(20px + 2vw);
+        margin: 12px 0px;
+        color: $c_white;
+    }
+    p{
+        font-size: calc(14px + 0.3vw); 
+        margin: 12px 0px;
+        padding: 0px 10px;
+        max-width: 495px;
+        color: $c_white;
+        display: inline-block;
+        text-align: center;
+    }
+
+}
+
+/* PARTE BLANCA */
+h2{
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    border-bottom: solid 2px $c_green;
+    font-size: calc(16px + 1.2vw); 
+}
+#wos{
+    margin: 40px auto;
+    max-width: 1200px;
+    width: 80%;
+}
+.img_wos{
+    height: 50px;
+    display: block;
+    margin: 0px auto;
+} 
+#container_wos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 20px;
+    gap: calc(20px + 6vw);
+
+    article{
+    width: 200px;
+        p{
+            text-align: center;
+            margin: 15px 0px;
+        }
+    }
+}
+
+h3{
+    color: $c_green;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+@media screen and (max-width:650px) {
+    #container_wos{
+        flex-direction: column;
+    }
+}
+
+
+
+/* PARTE VERDE */
+#container_yeezy{
+    background-color: $c_green;
+    width: 100%;
+    margin: 30px auto;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 40px;
+}
+.h2white{
+    color: $c_white;
+    border-color: $c_white;
+    display: inline-block;
+    clear: left;
+}
+
+h2{
+    clear: left;
+}
+#img_app{
+    width: 250px;
+    display: block;
+    margin:0px;
+}
+
+h3{
+    color: $c_white;
+    text-align: left;
+}
+
+#ali_derecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+#ali_izquierda{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    display: flex;
+    h2{
+        margin: 15px 0px;
+    }
+    
+}
+
+#logoSpoti{
+    width: 80px;
+    display: block;
+    margin: 0px auto;
+}
+#wd{
+    width: 100%;
+}
+
+@media screen and (min-width:770px) {
+    #container_yeezy{
+        height:90vh;
+        max-height: 700px;
+        flex-direction: row;
+        gap: 80px;
+    }
+    
+    #ali_derecha{
+        width: 50%;
+        justify-content: flex-end;
+    }
+    #ali_izquierda{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        width: 50%;
+        display: flex;
+
+        h2{
+            margin: 0px;
+        }        
+    }
+
+    #logoSpoti{
+        width: 80px;
+        position: absolute;
+        top: 300px;
+        left: calc(50vw - 40px);
+    }
+    #wd{
+        width: 250px;
+    }
+}
